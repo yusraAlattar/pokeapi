@@ -23,6 +23,7 @@ public class PokeController {
         return ResponseEntity.ok(pokemon);
     }
 
+
     @GetMapping("/{id}")
     public ResponseEntity<Pokemon> findPokemonById(@PathVariable String id) {
         return ResponseEntity.ok(pokeService.findById(id));
