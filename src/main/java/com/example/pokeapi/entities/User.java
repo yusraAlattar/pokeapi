@@ -1,7 +1,7 @@
 package com.example.pokeapi.entities;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 
 import javax.validation.constraints.NotEmpty;
@@ -15,6 +15,7 @@ public class User implements Serializable {
     @NotEmpty(message = "Username should not be empty please!")
     @Size(min = 4, max = 15, message = "Username should be between 4 and 15 characters long")
     private String username;
+    @NotEmpty
     @Size(min = 6, message = "password must contain at least 6 characters")
     private String password;
     private List<String> roles;

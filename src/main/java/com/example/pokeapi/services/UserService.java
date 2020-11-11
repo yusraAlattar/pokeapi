@@ -3,7 +3,6 @@ package com.example.pokeapi.services;
 import com.example.pokeapi.entities.User;
 import com.example.pokeapi.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -14,7 +13,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @Service
-public class  UserService {
+public class UserService {
     @Autowired
     private UserRepository userRepository;
     @Autowired
